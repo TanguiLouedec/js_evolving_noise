@@ -5,6 +5,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 ctx.fillStyle = 'black';
+ctx.globalAlpha = 0.7;
 
 for (let i = 0; i < canvas.width; i++) {
   for (let j = 0; j < canvas.height; j++) {
