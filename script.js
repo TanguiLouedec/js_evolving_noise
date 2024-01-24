@@ -52,14 +52,14 @@ canvas.height = window.innerHeight;
 
 const grid_size = 4;
 const resolution = 256;
-const colorscale = 250;
+const colorscale = 100;
 
 let pixel_size = canvas.width / resolution;
 let pixel_num = grid_size / resolution;
-
+// I bet animating it has something to do width perlin.get(j+1, i+1)
 for (let i = 0; i < grid_size; i += pixel_num / grid_size) {
   for (let j = 0; j < grid_size; j+= pixel_num / grid_size) {
-     let v = parseInt(perlin.get(j, i) * colorscale);
+    let v = parseInt(perlin.get(j, i) * colorscale);
     ctx.fillStyle = 'hsl('+v+',50%,50%)';
     ctx.fillRect(
       j / grid_size * canvas.width,
